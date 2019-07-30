@@ -1,0 +1,81 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+.thumbnail img {
+  max-height: 130px;
+  max-width: 245px;
+}
+.caption p {
+  color: #333;
+}
+.caption .price {
+  font-weight: bold;
+  font-size: 18px;
+}
+.navbar .coderTokyo {
+  font-weight: bold;
+  color: white !important;
+  font-size: 25px !important;
+}
+.nav-link {
+  font-weight: 500;
+  color: #EEE!important;
+  font-size: 18px !important;
+}
+.nav-link:hover {
+  color: white !important;
+}
+.boxCart {
+  border-radius: 4px;
+}
+.boxCart:hover {
+  border-color: blue;
+}
+.Dropbtn {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.Dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.Dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.Dropdown-content li {
+  border-radius: 4px;
+}
+.Dropdown-content .nav-link {
+  color: #007bff!important;
+  font-weight: 600 !important;
+
+}
+.Dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.Dropdown-content a:hover {
+  background-color: #007bff!important;
+  color: white !important;
+}
+
+.Dropdown:hover .Dropdown-content {
+  display: block;
+}
+
+.Dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}

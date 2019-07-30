@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+  <a class="navbar-brand coderTokyo" href="/">Coder.Tokyo</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse d-flex flex-row justify-content-between ml-5 mr-5" id="navbarSupportedContent">
+    <form class="form-inline my-2 my-lg-0 w-50">
+      <input class="form-control mr-sm-2 w-75" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-light my-2 my-sm-0 ml-4" type="submit">Search</button>
+    </form>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="nav-item">
+        <a class="nav-link" href="/shopping-cart">
+          <i class="fas fa-shopping-cart"></i> Shopping - Cart
+          <span class="badge badge-light">{{ session.cart.totalQty }}</span>
+        </a>
+      </li>
+      <li class="nav-item Dropdown dropdown">
+        <a href="#" class="nav-link Dropbtn"><i class="fas fa-user"></i> User Management <i class="fas fa-caret-down"></i></a>
+        <ul class="dropdown-menu Dropdown-content">
+          {{#if login }}
+            <li><a href="/user/profile" class="dropdown-item nav-link"><i class="fas fa-id-card"></i> User profile</a></li>
+            <li><a href="/user/logout" class="dropdown-item nav-link"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+          {{ else }}
+            <li><a href="/user/signup" class="dropdown-item nav-link"><i class="fas fa-user-plus"></i> Sign up</a></li>
+            <li><a href="/user/signin" class="dropdown-item nav-link"><i class="fas fa-sign-in-alt"></i> Sign in</a></li>
+          {{/if}}
+          
+        </ul>
+      </li>
+    </ul>
+    
+  </div>
+</nav>

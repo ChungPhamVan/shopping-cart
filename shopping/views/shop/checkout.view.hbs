@@ -1,0 +1,58 @@
+<div class="row d-flex flex-row justify-content-center">
+    <div class="col-sm-6 col-md-6 col-sm-offset-3 col-md-offset-3 pb-5">
+        <h2 class="w-100 text-center">Checkout</h2>
+        <h3 class="w-100 text-center">Your total: ${{ total }}</h3>
+        <div id="charge-error" class="alert alert-danger {{# if noError }}hidden{{/if}} ">
+            {{errMsg}}
+        </div>
+        <form action="/checkout" method="POST" class="w-100" id="checkout-form">
+            <div class="form-group">
+                <label for="Cart-Name">Cart-Name</label>
+                <input type="text" class="form-control w-100 " id="Cart-Name" required>
+            </div>
+            <div class="form-group">
+                <label for="Country">Country</label>
+                <input type="text" class="form-control w-100 " id="Country" required>
+            </div>
+            <div class="form-group">
+                <label for="Currency">Currency</label>
+                <input type="text" class="form-control w-100 " id="Currency" required>
+            </div>
+            <div class="form-group">
+                <label for="Address">Address</label>
+                <input type="text" class="form-control w-100" id="Address">
+            </div>
+            <div class="form-group">
+                <label for="Routing-Number">Routing-Number</label>
+                <input type="text" class="form-control w-100 " id="Routing-Number" required>
+            </div>
+            <div class="form-group">
+                <label for="Cart-Number">Cart-Number</label>
+                <input type="text" class="form-control w-100 " id="Cart-Number" required>
+            </div>
+            <div class="d-flex flex-row justify-content-between">
+                <div class="form-group">
+                    <label for="Cart-Expiry-Year">Expiration-Year</label>
+                    <input type="text" class="form-control w-100" id="Cart-Expiry-Year">
+                </div>
+                <div class="form-group">
+                    <label for="Cart-Expiry-Month">Expiration-Month</label>
+                    <input type="text" class="form-control w-100" id="Cart-Expiry-Month">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="CVC">CVC</label>
+                <input type="text" class="form-control w-100" id="CVC" required>
+            </div>
+            <div class="form-group">
+                <label for="Cart-Holder-Type">Cart-Holder-Type</label>
+                <input type="text" class="form-control w-100 " id="Cart-Holder-Type" required>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+                <button type="submit" class="btn btn-primary">Buy now</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="https://js.stripe.com/v3/"></script>
+<script src="javascripts/checkout.js"></script>

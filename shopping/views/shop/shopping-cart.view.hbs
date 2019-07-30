@@ -1,0 +1,36 @@
+{{# if products }}
+    <div class="row d-flex flex-row justify-content-center">
+        {{# each products }}
+            <div class="col-sm-6 col-md-8 col-md-offset-3 col-sm-offset-3 border px-3 py-3 rounded bg-secondary d-flex flex-row align-items-center justify-content-around mt-2">
+                <strong style="font-size: 25px;" class="text-light mr-5">{{ this.item.title }}</strong>               
+                <span class="badge badge-success ml-4" style="font-size: 20px;">${{ this.price }}</span>
+                <div class="nav-item Dropdown dropdown">
+                    <a href="#" class="nav-link Dropbtn bg-primary px-3 rounded">Action <i class="fas fa-caret-down"></i></a>
+                    <ul class="dropdown-menu Dropdown-content">
+                        <li><a href="/reduce/{{ this.item._id }}" class="dropdown-item nav-link">Reduce by 1</a></li>
+                        <li><a href="/remove/{{ this.item._id }}" class="dropdown-item nav-link">Remove All</a></li>
+                    </ul>
+                </div>
+                <span class="badge badge-light" style="font-size: 20px;">{{ this.qty }}</span>
+            </div>
+        {{/each}}
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+            <h2>Total: {{ this.totalPrice }}</h2>
+        </div>
+    </div>
+    <hr>
+    <div class="row d-flex flex-row justify-content-center">
+        <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3 d-flex flex-row justify-content-center">
+            <a href="/checkout" class="btn btn-primary btn-lg" role="button">Checkout</a>
+        </div>
+    </div>
+{{ else }}
+    <div class="row">
+        <h2 class="w-100 text-center">No Items in Cart</h2>
+    </div>
+{{/if}}
+
+
